@@ -38,11 +38,16 @@ gem 'grape-rabl'
 gem 'attr_uuid'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'rmagick'
+# gem 'rmagick'
 gem 'yajl-ruby', require: 'yajl'
 
 group :development, :test do
-
+  
+  # Ducomments grape
+  # gem 'swagger-docs'
+  gem 'grape-swagger'
+  gem 'grape-swagger-rails'
+  
   gem 'rails-erd'
   gem 'pry-rails'
   gem 'pry-byebug'

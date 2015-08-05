@@ -101,11 +101,20 @@ GEM
       rack-accept
       rack-mount
       virtus (>= 1.0.0)
+    grape-entity (0.4.7)
+      activesupport
+      multi_json (>= 1.3.2)
     grape-rabl (0.3.1)
       grape
       i18n
       rabl
       tilt
+    grape-swagger (0.10.1)
+      grape (>= 0.8.0)
+      grape-entity
+    grape-swagger-rails (0.1.0)
+      grape-swagger (>= 0.7.2)
+      railties (>= 3.2.12)
     hashie (3.4.1)
     i18n (0.7.0)
     ice_nine (0.11.1)
@@ -187,7 +196,6 @@ GEM
     rdoc (4.2.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
-    rmagick (2.15.2)
     ruby-graphviz (1.2.2)
     sass (3.4.14)
     sass-rails (5.0.3)
@@ -250,6 +258,8 @@ DEPENDENCIES
   factory_girl_rails
   grape
   grape-rabl
+  grape-swagger
+  grape-swagger-rails
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick
@@ -259,7 +269,6 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.2.1)
   rails-erd
-  rmagick
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
