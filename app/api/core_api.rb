@@ -15,9 +15,9 @@ class CoreAPI < Grape::API
                              info: {
                                 contact: "vodongnhut@gmail.com",
                                 description: %Q(Description area),
-                                license: "Apache 2.0",
-                                license_url: "http://www.apache.org/licenses/LICENSE-2.0.html",
-                                terms_of_service_url: "http://helloreverb.com/terms/",
+                                # license: "Apache 2.0",
+                                # license_url: "http://www.apache.org/licenses/LICENSE-2.0.html",
+                                # terms_of_service_url: "http://helloreverb.com/terms/",
                                 title: "Title App"
                              },
                              markdown: false,
