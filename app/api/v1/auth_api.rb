@@ -3,13 +3,22 @@ module V1
     resource :auth do
       
       desc "user login."
+      params do
+        # requires :action, type: Symbol, values: [:PAUSE, :RESUME, :STOP], documentation: { param_type: 'query' }
+        requires :email, type: String
+        requires :password, type: String
+      end
       post "/login", rabl: "auths/show" do
         ActiveRecord::Base.transaction do
           @auth = Auth.login(converted_params)
         end
       end
 
-      desc "user logout."
+      desc "user logout.",{
+        headers: {
+          "Access-Token" => { description: "Access-Token", required: true }
+        }
+      }
       get "/logout", rabl: "users/show" do
         ActiveRecord::Base.transaction do
           @auth = Auth.logout(current_user)

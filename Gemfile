@@ -47,6 +47,7 @@ group :development, :test do
   # gem 'swagger-docs'
   gem 'grape-swagger'
   gem 'grape-swagger-rails'
+  gem 'kramdown'
   
   gem 'rails-erd'
   gem 'pry-rails'

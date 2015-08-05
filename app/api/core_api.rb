@@ -20,7 +20,7 @@ class CoreAPI < Grape::API
                                 # terms_of_service_url: "http://helloreverb.com/terms/",
                                 title: "Title App"
                              },
-                             markdown: false,
+                             markdown: GrapeSwagger::Markdown::KramdownAdapter,
                              hide_documentation_path: true,
                              hide_format: true,
                              include_base_url: true
