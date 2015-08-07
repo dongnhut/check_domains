@@ -4,7 +4,6 @@ module V1
       
       desc "user login."
       params do
-        # requires :action, type: Symbol, values: [:PAUSE, :RESUME, :STOP], documentation: { param_type: 'query' }
         requires :email, type: String
         requires :password, type: String
       end
