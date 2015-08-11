@@ -1,28 +1,33 @@
-== README
+#Rails core service
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is template for api service. This has write by ruby on rails and grape gem.  
 
-Things you may want to cover:
+##Menu
+[TOC]
 
-* Ruby version
+## Config database
+Create new database file on config folder with content. `config/database.yml`
+``` ruby
+ adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+  
+development:
+  <<: *default
+  database: file_sync_osx_development
+  
+test:
+  <<: *default
+  database: file_sync_osx_test
+```
 
-* System dependencies
+## How to run?
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. Create database:
+  `rake db:create`
+  `rake db:migrate`
+2. Get run application:
+`rails s` and go to browser with url:  http://localhost:3000/swagger  
